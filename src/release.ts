@@ -179,7 +179,7 @@ function renderTemplate(
 
 function getReleaseTagName(): string {
   if (github.context.ref.startsWith('refs/tags/v')) {
-    return github.context.ref.replace('refs/tags/v', '')
+    return github.context.ref.replace('refs/tags/', '')
   }
 
   if (github.context.ref === 'refs/heads/main') {
